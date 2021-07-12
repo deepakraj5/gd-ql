@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const bookSchema = new mongoose.Schema({
     name: String,
-    authorId: String
+    authorId: mongoose.Types.ObjectId
 })
 
 

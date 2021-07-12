@@ -1,12 +1,13 @@
-const { registerAuthor, listAuthors } = require('../../controllers/author')
+const { registerAuthor, listAuthors,getAuthor } = require('../../controllers/author')
 
 
 const Mutation = {
-    createAuthor: (_, args) => registerAuthor(args.author)
+    createAuthor: (_, args, context) => registerAuthor(args.author, context)
 }
 
 const Query = {
-    getAuthors: (_, args) => listAuthors()
+    getAuthors: (_, args, context) => listAuthors(context),
+    getAuthor: (_, args) => getAuthor(args)
 }
 
 

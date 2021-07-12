@@ -1,6 +1,7 @@
 const { gql } = require('apollo-server')
 const authorSchema = require('./author')
 const bookSchema = require('./book')
+const userSchema = require('./user')
 
 module.exports = gql`
 
@@ -14,5 +15,6 @@ module.exports = gql`
 
     ${authorSchema}
     ${bookSchema}
+    ${userSchema}
 
 `
